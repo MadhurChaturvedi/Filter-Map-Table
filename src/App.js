@@ -24,6 +24,7 @@ function App() {
           gap: "4rem",
         }}
       >
+        <h1 style={{fontWeight:'bold'}}>Map and Filter & Searching</h1>
         <input
           type="search"
           onChange={(e) => setSearch(e.target.value)}

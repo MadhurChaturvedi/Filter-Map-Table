@@ -1,23 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Table from "react-bootstrap/Table";
+import data from "./data";
+import { useState } from "react";
 function App() {
+  const [search, setSearch] = useState("");
+  console.log(search);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        background: "#c7ecee",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div
+        style={{
+          width: "50%",
+          height: "auto",
+          background: "#FFF",
+          padding: "3rem",
+          gap: "4rem",
+        }}
+      >
+        <input
+          type="search"
+          onChange={(e) => setSearch(e.target.value)}
+          style={{ width: "100%" }}
+        />
+
+        <br />
+        <br />
+        <br />
+        <Table striped>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/*  */}
+            {data
+              .filter((item) => {
+                return search.toLowerCase() === ""
+                  ? item
+                  : item.first_name.toLowerCase().includes(search);
+              })
+              .map((item) => (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.first_name}</td>
+                  <td>{item.last_name}</td>
+                </tr>
+              ))}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 }

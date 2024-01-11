@@ -28,7 +28,8 @@ function App() {
         <input
           type="search"
           onChange={(e) => setSearch(e.target.value)}
-          style={{ width: "100%" }}
+          style={{ width: "100%",borderRadius:'20px',padding:'1rem',fontSize:'1rem'  }}
+         
         />
 
         <br />

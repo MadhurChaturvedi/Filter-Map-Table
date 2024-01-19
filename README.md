@@ -4,8 +4,9 @@
 
 <div align="center"><img width="600" src='https://github.com/MadhurChaturvedi/Filter-Map-Table/assets/93113162/28fd566b-1e39-454d-baa9-15d115b2a0c9' /></div>
 
-<p>
-I developed a React application that adeptly integrates the map and filter concepts to manipulate data. Leveraging asynchronous Fetch API calls enhances the app's responsiveness, showcasing a proficient fusion of state-of-the-art web development techniques for a seamless user experience.</p>
+<p align="center"><font color="red">
+I developed a React application that adeptly integrates the map and filter concepts to manipulate data. Leveraging asynchronous Fetch API calls enhances the app's responsiveness, showcasing a proficient fusion of state-of-the-art web development techniques for a seamless user experience. </font></p>
+
 ```node 
 npm i
 ````
